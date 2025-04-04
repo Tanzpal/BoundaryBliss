@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import image1 from "../images/Football.jpeg";
+import image1 from "../images/Football.png";
 import image2 from "../images/Cricket.jpeg";
 import image3 from "../images/download.jpeg";
 

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +7,11 @@
   list-style: none;
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+section {
+  margin: 0;
+  padding: 0;
 }
 
 .Logo {
@@ -34,10 +41,9 @@
   font-size: 18px;
 }
 
-/* Header */
+/* Header - Made Non-Sticky */
 header {
-  position: fixed;
-  top: 0;
+  position: static; /* Removed fixed positioning */
   width: 100%;
   z-index: 1000;
   display: flex;
@@ -62,6 +68,7 @@ header {
   padding: 100px 14%;
   color: white;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 .home-text h1 {
@@ -85,13 +92,52 @@ header {
 }
 
 .home-text {
-  margin-top: 90px;
   margin-left: auto;
-  text-align: right;
+  text-align: left; /* Align text to the left */
+  width: fit-content; /* Adjust width to content */
 }
 
 .home-text h1 {
   font-size: 4.4rem;
+}
+
+.Para-text {
+  margin-top: 10px;
+}
+
+.Btn-BookTickets {
+  border-radius: 10px;
+  height: 52px;
+  width: 130px;
+  background-color: #ee1e46;
+  border: 0;
+  margin-top: 22px;
+  color: #ffffff;
+}
+
+.Headline {
+  background-color: #1a1a1a;
+  padding: 10px 14%;
+  color: #ffffff;
+  margin-top: 70px;
+}
+
+.Headline-text {
+  padding-top: 120px;
+}
+
+.Headline-text h1 {
+  font-size: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700; /* Bold for headings */
+}
+
+.Headline-text p {
+  padding-top: 30px;
+  font-size: 1.3rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; /* Regular for paragraph */
+  text-align: justify;
 }
 
 /* Responsive Navbar */
