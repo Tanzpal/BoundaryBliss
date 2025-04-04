@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.Logo {
+  object-fit: cover;
+  width: 10%;
+}
+
+/* Navbar Styles */
+.Navbar {
+  display: flex;
+  align-items: center;
+  transition: ease 0.4s;
+}
+
+.Navbar ul {
+  display: flex;
+  gap: 70px;
+}
+
+.Navbar li {
+  display: inline-block;
+}
+
+.Navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 10px 14%;
+  transition: ease 0.4s;
+}
+
+/* Burger Menu */
+#menu-icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Home Section */
+.Home {
+  position: relative;
+  z-index: 2; /* Ensures Home is in front of carousel */
+  padding: 100px 14%;
+  color: white;
+  text-align: center;
+}
+
+.home-text h1 {
+  font-size: 36px;
+}
+
+/* Carousel */
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* Sends carousel behind all other content */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.home-text {
+  margin-top: 90px;
+  margin-left: auto;
+  text-align: right;
+}
+
+.home-text h1 {
+  font-size: 4.4rem;
+}
+
+/* Responsive Navbar */
+@media (max-width: 1000px) {
+  .Navbar {
+    display: none;
+    position: absolute;
+    top: 60px; /* Directly below burger */
+    right: 14%;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 10px;
+    flex-direction: column;
+    width: 150px;
+  }
+
+  .Navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Navbar.open {
+    display: flex;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .Navbar {
+    display: flex;
+  }
+
+  .Navbar ul {
+    flex-direction: row;
+    gap: 70px;
+  }
+}
