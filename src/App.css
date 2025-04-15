@@ -20,6 +20,8 @@ section {
   padding: 0;
 }
 
+/* NAVBAR */
+
 .Logo {
   object-fit: cover;
   width: 10%;
@@ -65,7 +67,8 @@ header {
   display: none;
 }
 
-/* Home Section */
+/* HOME SECTION */
+
 .Home {
   position: relative;
   z-index: 2; /* Ensures Home is in front of carousel */
@@ -79,7 +82,8 @@ header {
   font-size: 36px;
 }
 
-/* Carousel */
+/* CAROUSEL */
+
 .carousel {
   position: absolute;
   top: 0;
@@ -94,8 +98,6 @@ header {
   height: 100vh;
   object-fit: cover;
 }
-
-/* Section home*/
 
 .Home {
   margin-top: -10px;
@@ -114,6 +116,8 @@ header {
   font-size: 1.2rem;
 }
 
+/* BUTTON */
+
 .home-btn {
   margin-top: 6px;
   border-radius: 8px;
@@ -125,6 +129,8 @@ header {
   color: #ffffff;
   background-color: #da2c38;
 }
+
+/* HEADLINE */
 
 .Headline-Txt {
   text-align: justify;
@@ -144,7 +150,7 @@ header {
 .Head-txt {
   margin-top: 10px;
   word-spacing: 0.6px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .Imp-Headline {
@@ -156,10 +162,10 @@ header {
 }
 
 .Headings-txtMain {
-padding-top: 60px;
-padding-right: 30px;
-padding-bottom: 60px;
-padding-left: 30px;
+  padding-top: 60px;
+  padding-right: 30px;
+  padding-bottom: 60px;
+  padding-left: 30px;
 }
 
 .Headings {
@@ -173,6 +179,119 @@ padding-left: 30px;
   text-align: justify;
 }
 
+/* CARDS */
+
+.Cards-Main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  padding: 10px 14%;
+  /* background: whitesmoke; */
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.card {
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+
+.Cards-Main img {
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+}
+
+.intro {
+  height: 70px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
+  background: rgba(27, 27, 27, 0.5);
+  color: #ffffff;
+  bottom: -777px;
+  transition: 0.5s;
+}
+
+.container h1 {
+  margin: 10px;
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+}
+
+.container p {
+  font-size: 20px;
+  margin: 20px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container span {
+  font-weight: bold;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card:hover .intro {
+  height: 300px;
+  /* bottom: -790px; */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover p {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* INTERIOR */
+.Grid-Container {
+  text-align: justify;
+}
+
+.Information-Ground {
+  margin-top: 80px;
+}
+
+.First-Grid {
+  padding: 10px 14%;
+  display: flex;
+  gap: 40px;
+  color: #ffffff;
+}
+
+.First-Grid img {
+  height: 50vh;
+}
+
+.Interior-Heading {
+  font-size: 2.3rem;
+}
+
+.Text {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.Second-Grid {
+  margin-top: 80px;
+  padding: 10px 14%;
+  display: flex;
+  gap: 40px;
+  color: #ffffff;
+}
+
+.Second-Grid img {
+  height: 50vh;
+}
 
 /* Responsive Navbar */
 @media (max-width: 1000px) {
