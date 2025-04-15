@@ -9,6 +9,12 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #222831;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
 section {
   margin: 0;
   padding: 0;
@@ -24,6 +30,7 @@ section {
   display: flex;
   align-items: center;
   transition: ease 0.4s;
+  font-family: "Roboto", sans-serif;
 }
 
 .Navbar ul {
@@ -37,19 +44,16 @@ section {
 
 .Navbar a {
   color: white;
-  text-decoration: none;
-  font-size: 18px;
 }
 
 /* Header - Made Non-Sticky */
 header {
-  position: static; /* Removed fixed positioning */
+  position: relative; /* ensures z-index applies */
   width: 100%;
-  z-index: 1000;
+  z-index: 10; /* updated from 9999 to a cleaner value */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent;
   padding: 10px 14%;
   transition: ease 0.4s;
 }
@@ -91,54 +95,84 @@ header {
   object-fit: cover;
 }
 
-.home-text {
-  margin-left: auto;
-  text-align: left; /* Align text to the left */
-  width: fit-content; /* Adjust width to content */
-}
+/* Section home*/
 
-.home-text h1 {
-  font-size: 4.4rem;
-}
-
-.Para-text {
-  margin-top: 10px;
-}
-
-.Btn-BookTickets {
-  border-radius: 10px;
-  height: 52px;
-  width: 130px;
-  background-color: #ee1e46;
-  border: 0;
-  margin-top: 22px;
-  color: #ffffff;
-}
-
-.Headline {
-  background-color: #1a1a1a;
-  padding: 10px 14%;
-  color: #ffffff;
-  margin-top: 70px;
-}
-
-.Headline-text {
-  padding-top: 120px;
-}
-
-.Headline-text h1 {
-  font-size: 2.5rem;
+.Home {
+  margin-top: -10px;
+  position: relative;
+  padding: 60px 14%;
+  color: white;
   font-family: "Roboto", sans-serif;
-  font-weight: 700; /* Bold for headings */
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2; /* Home is above carousel, but not above dots */
 }
 
-.Headline-text p {
-  padding-top: 30px;
-  font-size: 1.3rem;
+.Home-txt {
+  max-width: 700px;
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
+.home-btn {
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  width: 120px;
   font-family: "Roboto", sans-serif;
-  font-weight: 400; /* Regular for paragraph */
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #da2c38;
+}
+
+.Headline-Txt {
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.3rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Headline-Txt h1 {
+  width: 100%;
+  max-width: 350px;
   text-align: justify;
 }
+
+.Head-txt {
+  margin-top: 10px;
+  word-spacing: 0.6px;
+  font-size: 1.3rem;
+}
+
+.Imp-Headline {
+  margin-top: 50px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 10px 14%;
+  font-family: "Roboto", sans-serif;
+}
+
+.Headings-txtMain {
+padding-top: 60px;
+padding-right: 30px;
+padding-bottom: 60px;
+padding-left: 30px;
+}
+
+.Headings {
+  font-size: 2.3rem;
+  max-width: 100%;
+}
+
+.Headings-txt {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
 
 /* Responsive Navbar */
 @media (max-width: 1000px) {
